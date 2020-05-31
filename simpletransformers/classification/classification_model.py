@@ -79,7 +79,6 @@ class ClassificationModel:
     def __init__(
         self, model_type, model_name, num_labels=None, weight=None, args=None, use_cuda=True, cuda_device=-1, **kwargs,
     ):
-
         """
         Initializes a ClassificationModel model.
 
@@ -436,6 +435,7 @@ class ClassificationModel:
                                     "Training loss": current_loss,
                                     "lr": scheduler.get_lr()[0],
                                     "global_step": global_step,
+                                    'epoch': epoch_number,
                                 }
                             )
 
